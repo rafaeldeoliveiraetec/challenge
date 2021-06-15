@@ -25,86 +25,85 @@
 			
 			<div class="form-group col-md-6 mt-3">
 	      		<label for="nome">Nome:</label>
-	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Nome do cliente" th:field="*{nome}">
+	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Nome do cliente" th:field="*{nome}" required>
 	     	 	<div th:errors="*{nome}" class="invalid-feedback"></div>
 	    	</div>    
 	    	
 	    	<div class="form-group col-md-6 mt-3">
 	      		<label for="nome">Endereço</label>
-	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Endereço do cliente" th:field="*{endereco}">
+	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Endereço do cliente" th:field="*{endereco}" required>
 	     	 	<div th:errors="*{endereco}" class="invalid-feedback"></div>
 	    	</div>
 	    		    	
 	    		    	<div class="form-group col-md-6 mt-3">
 	    		    	<label for="nome">Nº</label>
-	    		    	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Nº" th:field="*{enderecoN}">
+	    		    	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Nº" th:field="*{enderecoN}" required>
 	    		    	<div th:errors="*{enderecoN}" class="invalid-feedback"></div>
 	    		    	</div>
 
 	    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">Cidade</label>
-	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Cidade" th:field="*{cidade}">
+	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Cidade" th:field="*{cidade}" required>
 	     	 	<div th:errors="*{cidade}" class="invalid-feedback"></div>
 	    	</div> 
 	    	<div class="form-gropu col-md-2 mt-3">
 	    	<label for="nome">Estado</label>
-	    	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="tipo financiamento" th:field="*{estado}">
-<div th:errors="*{tipoFinanciamento}" class="invalid-feedback"></div>
+	    	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Estado" th:field="*{estado}" required>
 <div th:errors="*{estado}" class="invalid-feedback"></div>
 	    	</div>
 	    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">CEP</label>
-	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="CEP(Só números)" th:field="*{cep}">
+	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="CEP(Só números)" th:field="*{cep}" required>
 	     	 	<div th:errors="*{cep}" class="invalid-feedback"></div>
 	    	</div> 
 	    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">CPF</label>
-	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="CPF(Só números)" th:field="*{cpf}">
+	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="CPF(Só números)" th:field="*{cpf}" required>
 	     	 	<div th:errors="*{cpf}" class="invalid-feedback"></div>
 	    	</div> 
 	    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">RG</label>
-	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="RG(Só números)" th:field="*{rg}">
+	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="RG(Só números)" th:field="*{rg}" required>
 	     	 	<div th:errors="*{rg}" class="invalid-feedback"></div>
 	    	</div> 
 	    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">Data nascimento</label>
-	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Data nascimento" th:field="*{cidade}">
+	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Data nascimento" th:field="*{cidade}" required>
 	     	 	<div th:errors="*{dataNascimento}" class="invalid-feedback"></div>
 	    	</div> 
 	    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">E-mail</label>
-	     	 	<input type="email" class="form-control" th:errorclass="is-invalid" placeholder="E-mail" th:field="*{email}">
+	     	 	<input type="email" class="form-control" th:errorclass="is-invalid" placeholder="E-mail" th:field="*{email}" required>
 	     	 	<div th:errors="*{email}" class="invalid-feedback"></div>
 	    	</div> 
 	    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">Telefone residencial</label>
-	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Telefone residencial(Só números)" th:field="*{telefone}">
+	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Telefone residencial(Só números)" th:field="*{telefone}" required>
 	     	 	<div th:errors="*{telefone}" class="invalid-feedback"></div>
 	    	</div> 
 	    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">Celular</label>
-	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Celular(Só números)" th:field="*{celular}">
+	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Celular(Só números)" th:field="*{celular}" required>
 	     	 	<div th:errors="*{celular}" class="invalid-feedback"></div>
 	    	</div> 
 	    	<div class="form-gropu col-md-2 mt-3">
 	    	<label for="nome">Tipo financiamento</label>
-<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="tipo financiamento" th:field="*{tipoFinanciamento}">
+<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="tipo financiamento" th:field="*{tipoFinanciamento}" required>
 <div th:errors="*{tipoFinanciamento}" class="invalid-feedback"></div>
 	    	</div>
 	    		    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">Quantidade parcelamento</label>
-	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Quantidade parcelamento" th:field="*{quantidadeParcelamento}">
+	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Quantidade parcelamento" th:field="*{quantidadeParcelamento}" required>
 	     	 	<div th:errors="*{quantidadeParcelamento}" class="invalid-feedback"></div>
 	    	</div> 
 	    		    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">Valor intenção</label>
-	     	 	<input type="number" min="1" step="any" class="form-control" th:errorclass="is-invalid" placeholder="R$" th:field="*{valorIntencao}">
+	     	 	<input type="number" min="1" step="any" class="form-control" th:errorclass="is-invalid" placeholder="R$" th:field="*{valorIntencao}" required>
 	     	 	<div th:errors="*{valorIntencao}" class="invalid-feedback"></div>
 	    	</div> 
 	    		    		    		    	<div class="form-group col-md-2 mt-3">
 	      		<label for="nome">Salário</label>
-	     	 	<input type="number" min="1" step="any" class="form-control" th:errorclass="is-invalid" placeholder="R$" th:field="*{salario}">
+	     	 	<input type="number" min="1" step="any" class="form-control" th:errorclass="is-invalid" placeholder="R$" th:field="*{salario}" required>
 	     	 	<div th:errors="*{salario}" class="invalid-feedback"></div>
 	    	</div> 
 	    	
@@ -118,5 +117,6 @@
     </div>
 	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+	<script src="js/validator.min.js"></script>
 </body>
 </html>
