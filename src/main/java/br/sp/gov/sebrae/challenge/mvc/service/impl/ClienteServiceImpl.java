@@ -23,6 +23,20 @@ public class ClienteServiceImpl implements ClienteService{
 		List<Cliente> cliente = fromTo(lista);
 		return cliente;
 	}
+	
+	@Override
+	public Cliente salvarCliente(Cliente cliente) {
+		ClienteEntity entity = fromTo(cliente);
+		entity = repository.save(entity);
+		Cliente clienteRetorno = fromTo(entity);
+		return clienteRetorno;
+	}
+	
+	@Override
+	public Cliente editarCliente(Long id) {
+		ClienteEntity entity = repository.findById(id).get();		
+		return fromTo(entity);
+	}
 
 	private List<Cliente> fromTo(List<ClienteEntity> lista) {
 		List<Cliente> listaDto = new ArrayList<>();
@@ -48,20 +62,6 @@ public class ClienteServiceImpl implements ClienteService{
 			listaDto.add(dto);
 		}
 		return listaDto;
-	}
-
-	@Override
-	public Cliente salvarCliente(Cliente cliente) {
-		ClienteEntity entity = fromTo(cliente);
-		entity = repository.save(entity);
-		Cliente clienteRetorno = fromTo(entity);
-		return clienteRetorno;
-	}
-	
-	@Override
-	public Cliente editarCliente(Long id) {
-		ClienteEntity entity = repository.findById(id).get();		
-		return fromTo(entity);
 	}
 	
 	private ClienteEntity fromTo(Cliente cliente) {

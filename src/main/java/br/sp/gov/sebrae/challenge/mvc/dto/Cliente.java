@@ -12,35 +12,20 @@ public class Cliente implements Serializable {
 	private Long id;
 	@NotNull
 	private String nome;
-	@NotNull
 	private String endereco;
-	@NotNull
 	private String enderecoN;
-	@NotNull
 	private String cidade;
-	@NotNull
 	private String estado;
-	@NotNull
 	private String cep;
-	@NotNull
 	private String cpf;
-	@NotNull
 	private String rg;
-	@NotNull
 	private String dataNascimento;
-	@NotNull
 	private String email;
-	@NotNull
 	private String telefone;
-	@NotNull
 	private String celular;
-	@NotNull
 	private String tipoFinanciamento;
-	@NotNull
 	private String quantidadeParcelamento;
-	@NotNull
 	private String valorIntencao;
-	@NotNull
 	private String salario;
 	public Long getId() {
 		return id;
