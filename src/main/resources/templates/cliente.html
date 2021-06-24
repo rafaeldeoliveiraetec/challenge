@@ -19,90 +19,122 @@
       </a>
     </header>
 <div class="container">
-<form method="POST" th:object="${cliente}"  th:action="@{/salvar-cliente}">
+<form class="row gy-2 gx-3 align-items-center" method="POST" th:object="${cliente}"  th:action="@{/salvar-cliente}">
 		
-		<div class="form-row">		
+		<div class="row">		
 			<div><input type="hidden"  th:field="*{id}"></div>  
 			
-			<div class="form-group col-md-6 mt-3">
+			<div class="col-11">
 	      		<label for="nome">Nome:</label>
-	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Nome do cliente" th:field="*{nome}" id="nome" required>
+	     	 	<input required type="text" class="form-control" th:errorclass="is-invalid" placeholder="Nome do cliente" th:field="*{nome}" id="nome">
 	     	 	<div th:errors="*{nome}" class="invalid-feedback">Digite o nome.</div>
 	    	</div>    
 	    	
-	    	<div class="form-group col-md-6 mt-3">
+	    	<div class="col-auto">
 	      		<label for="endereco">Endereço</label>
 	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Endereço do cliente" th:field="*{endereco}" required>
 	     	 	<div th:errors="*{endereco}" class="invalid-feedback"></div>
 	    	</div>
 	    		    	
-	    		    	<div class="form-group col-md-6 mt-3">
+	    		    	<div class="col-auto">
 	    		    	<label for="numero">Nº</label>
-	    		    	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Nº" th:field="*{enderecoN}" required>
+	    		    	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Nº" th:field="*{enderecoN}"
+	    		    	id="numero" required>
 	    		    	<div th:errors="*{enderecoN}" class="invalid-feedback"></div>
 	    		    	</div>
 
-	    	<div class="form-group col-md-2 mt-3">
+	    	<div class="col-auto">
 	      		<label for="cidade">Cidade</label>
 	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Cidade" th:field="*{cidade}" required>
 	     	 	<div th:errors="*{cidade}" class="invalid-feedback"></div>
 	    	</div> 
-	    	<div class="form-gropu col-md-2 mt-3">
+	    	<div class="col-auto">
 	    	<label for="estado">Estado</label>
-	    	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Estado" th:field="*{estado}" required>
+	    	<select class="form-select" name="estados-brasil" th:errorclass="is-invalid" placeholder="Estado" th:field="*{estado}" required>
+	<option value="AC">Acre</option>
+	<option value="AL">Alagoas</option>
+	<option value="AP">Amapá</option>
+	<option value="AM">Amazonas</option>
+	<option value="BA">Bahia</option>
+	<option value="CE">Ceará</option>
+	<option value="DF">Distrito Federal</option>
+	<option value="ES">Espírito Santo</option>
+	<option value="GO">Goiás</option>
+	<option value="MA">Maranhão</option>
+	<option value="MT">Mato Grosso</option>
+	<option value="MS">Mato Grosso do Sul</option>
+	<option value="MG">Minas Gerais</option>
+	<option value="PA">Pará</option>
+	<option value="PB">Paraíba</option>
+	<option value="PR">Paraná</option>
+	<option value="PE">Pernambuco</option>
+	<option value="PI">Piauí</option>
+	<option value="RJ">Rio de Janeiro</option>
+	<option value="RN">Rio Grande do Norte</option>
+	<option value="RS">Rio Grande do Sul</option>
+	<option value="RO">Rondônia</option>
+	<option value="RR">Roraima</option>
+	<option value="SC">Santa Catarina</option>
+	<option value="SP">São Paulo</option>
+	<option value="SE">Sergipe</option>
+	<option value="TO">Tocantins</option>
+</select>
 <div th:errors="*{estado}" class="invalid-feedback"></div>
 	    	</div>
-	    		    	<div class="form-group col-md-2 mt-3">
+	    		    	<div class="col-auto">
 	      		<label for="cep">CEP</label>
 	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="CEP(Só números)" th:field="*{cep}" required>
 	     	 	<div th:errors="*{cep}" class="invalid-feedback"></div>
 	    	</div> 
-	    		    	<div class="form-group col-md-2 mt-3">
+	    		    	<div class="col-auto">
 	      		<label for="cpf">CPF</label>
 	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="CPF(Só números)" th:field="*{cpf}" required>
 	     	 	<div th:errors="*{cpf}" class="invalid-feedback"></div>
 	    	</div> 
-	    		    	<div class="form-group col-md-2 mt-3">
+	    		    	<div class="col-auto">
 	      		<label for="rg">RG</label>
 	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="RG(Só números)" th:field="*{rg}" required>
 	     	 	<div th:errors="*{rg}" class="invalid-feedback"></div>
 	    	</div> 
-	    		    	<div class="form-group col-md-2 mt-3">
+	    		    	<div class="col-auto">
 	      		<label for="dataNascimento">Data nascimento</label>
-	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Data nascimento" th:field="*{cidade}" required>
+	     	 	<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="Data nascimento" th:field="*{dataNascimento}" required>
 	     	 	<div th:errors="*{dataNascimento}" class="invalid-feedback"></div>
 	    	</div> 
-	    		    	<div class="form-group col-md-2 mt-3">
+	    		    	<div class="col-auto">
 	      		<label for="email">E-mail</label>
 	     	 	<input type="email" class="form-control" th:errorclass="is-invalid" placeholder="E-mail" th:field="*{email}" required>
 	     	 	<div th:errors="*{email}" class="invalid-feedback"></div>
 	    	</div> 
-	    		    	<div class="form-group col-md-2 mt-3">
+	    		    	<div class="col-auto">
 	      		<label for="telefone">Telefone residencial</label>
 	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Telefone residencial(Só números)" th:field="*{telefone}" required>
 	     	 	<div th:errors="*{telefone}" class="invalid-feedback"></div>
 	    	</div> 
-	    		    	<div class="form-group col-md-2 mt-3">
+	    		    	<div class="col-auto">
 	      		<label for="celular">Celular</label>
 	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Celular(Só números)" th:field="*{celular}" required>
 	     	 	<div th:errors="*{celular}" class="invalid-feedback"></div>
 	    	</div> 
-	    	<div class="form-gropu col-md-2 mt-3">
+	    	<div class="col-auto">
 	    	<label for="tipoFinanciamento">Tipo financiamento</label>
-<input type="text" class="form-control" th:errorclass="is-invalid" placeholder="tipo financiamento" th:field="*{tipoFinanciamento}" required>
+<select class="form-select" th:errorclass="is-invalid" placeholder="tipo financiamento" th:field="*{tipoFinanciamento}" required>
+<option value="Auto">AUTO</option>
+	<option value="Imobiliário">IMOBILIÁRIO</option>
+</select>
 <div th:errors="*{tipoFinanciamento}" class="invalid-feedback"></div>
 	    	</div>
-	    		    		    	<div class="form-group col-md-2 mt-3">
+	    		    		    	<div class="col-auto">
 	      		<label for="quantidadeParcelamento">Quantidade parcelamento</label>
 	     	 	<input type="number" class="form-control" th:errorclass="is-invalid" placeholder="Quantidade parcelamento" th:field="*{quantidadeParcelamento}" required>
 	     	 	<div th:errors="*{quantidadeParcelamento}" class="invalid-feedback"></div>
 	    	</div> 
-	    		    		    	<div class="form-group col-md-2 mt-3">
+	    		    		    	<div class="col-auto">
 	      		<label for="valorIntencao">Valor intenção</label>
 	     	 	<input type="number" min="1" step="any" class="form-control" th:errorclass="is-invalid" placeholder="R$" th:field="*{valorIntencao}" required>
 	     	 	<div th:errors="*{valorIntencao}" class="invalid-feedback"></div>
 	    	</div> 
-	    		    		    		    	<div class="form-group col-md-2 mt-3">
+	    		    		    		    	<div class="col-auto">
 	      		<label for="salario">Salário</label>
 	     	 	<input type="number" min="1" step="any" class="form-control" th:errorclass="is-invalid" placeholder="R$" th:field="*{salario}" required>
 	     	 	<div th:errors="*{salario}" class="invalid-feedback"></div>
@@ -111,7 +143,7 @@
 	    	
 		</div>
 		
-			<div>
+			<div class="d-grid gap-2">
 				<button type="submit" class="btn btn-primary">Salvar</button>
 			</div>
 		</form>	
